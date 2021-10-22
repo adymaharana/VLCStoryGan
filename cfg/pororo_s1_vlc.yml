@@ -1,0 +1,49 @@
+CONFIG_NAME: 'stageI'
+
+DATASET_NAME: 'pororo_martt_bs12'
+EMBEDDING_TYPE: 'universal'
+GPU_ID: '0'
+Z_DIM: 100
+DATA_DIR: '../data/coco'
+IMSIZE: 64
+WORKERS: 2
+STAGE: 1
+VIDEO_LEN: 5
+VIS_COUNT: 10
+LABEL_NUM: 9
+TRAIN:
+    FLAG: True
+    IM_BATCH_SIZE: 20
+    ST_BATCH_SIZE: 12
+    MAX_EPOCH: 150
+    LR_DECAY_EPOCH: 20
+    SNAPSHOT_INTERVAL: 3
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    COEFF:
+      KL: 1.0
+
+GAN:
+    CONDITION_DIM: 124
+    DF_DIM: 124
+    GF_DIM: 256
+
+TEXT:
+    DIMENSION: 356
+
+IMG_DUAL: False
+STORY_DUAL: False
+USE_MART: False
+USE_MARTT: True
+IMG_DISC: True
+STORY_DISC: True
+RECURRENT: False
+USE_TRANSFORMER: False
+TWO_STG: True
+TWO_STG_ATTN: "stream"
+
+MART:
+    max_t_len: 5
+    
+MARTT:
+    num_hidden_layers: 4
