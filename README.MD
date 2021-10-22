@@ -1,6 +1,6 @@
 ## Integrating Visuospatial, Linguistic and Commonsense Structure into Story Visualization
 
-PyTorch code for the EMNLP 2021 paper "Integrating Visuospatial, Linguistic and Commonsense Structure into Story Visualization".
+PyTorch code for the EMNLP 2021 paper "Integrating Visuospatial, Linguistic and Commonsense Structure into Story Visualization". See the arxiv paper [here](https://arxiv.org/abs/2110.10834).
 
 #### Requirements:
 This code has been tested on torch==1.11.0.dev20211014 (nightly) and torchvision==0.12.0.dev20211014 (nightly)
@@ -36,3 +36,13 @@ Please see [here](https://github.com/adymaharana/StoryViz) for evaluation models
 
 To evaluate Frechet Inception Distance (FID):\
 ```python eval_vfid --img_ref_dir <path-to-image-directory-original images> --img_gen_dir <path-to-image-directory-generated-images> --mode <mode>```
+
+## Citation:
+```
+@inproceedings{maharana2021integrating,
+  title={Integrating Visuospatial, Linguistic and Commonsense Structure into Story Visualization},
+  author={Maharana, Adyasha and Bansal, Mohit},
+  booktitle={EMNLP},
+  year={2021}
+}
+```
