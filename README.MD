@@ -37,6 +37,8 @@ Please see [here](https://github.com/adymaharana/StoryViz) for evaluation models
 To evaluate Frechet Inception Distance (FID):\
 ```python eval_vfid --img_ref_dir <path-to-image-directory-original images> --img_gen_dir <path-to-image-directory-generated-images> --mode <mode>```
 
+More details coming soon.
+
 ## Citation:
 ```
 @inproceedings{maharana2021integrating,
