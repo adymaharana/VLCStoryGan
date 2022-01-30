@@ -2,13 +2,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.nn.parallel
-from miscc.config import cfg
+from .miscc.config import cfg
 from torch.autograd import Variable
-from recurrent import BertEncoderWithMemory, BertEmbeddings, NonRecurTransformer, BertEncoderWithMemoryForTree
+from .recurrent import BertEncoderWithMemory, BertEmbeddings, NonRecurTransformer, BertEncoderWithMemoryForTree
 from easydict import EasyDict as edict
-from layers import DynamicFilterLayer1D as DynamicFilterLayer
-from GLAttention import GLAttentionGeneral as ATT_NET
-from cross_attention import LxmertCrossAttentionLayer as CrossAttn
+from .layers import DynamicFilterLayer1D as DynamicFilterLayer
+from .GLAttention import GLAttentionGeneral as ATT_NET
+from .cross_attention import LxmertCrossAttentionLayer as CrossAttn
 from torchvision import models
 import numpy as np
 import os

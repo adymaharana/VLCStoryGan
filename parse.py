@@ -29,8 +29,11 @@ def get_parse_tree(caption):
 if __name__ == "__main__":
 
     print("Loading parser")
-    nlp = spacy.load('en_core_web_sm')
-    nlp.add_pipe(benepar.BeneparComponent("benepar_en3"))
+    nlp = spacy.load('en_core_web_md')
+    if spacy.__version__.startswith('2'):
+        nlp.add_pipe(benepar.BeneparComponent("benepar_en3"))
+    else:
+        nlp.add_pipe("benepar", config={"model": "benepar_en3"})
 
     args = parse_args()
     if args.dataset == 'pororo':

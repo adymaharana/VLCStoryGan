@@ -3,7 +3,7 @@ import errno
 import numpy as np
 import PIL
 from copy import deepcopy
-from miscc.config import cfg
+from .config import cfg
 import pdb
 from torch.nn import init
 import torch

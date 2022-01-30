@@ -81,7 +81,7 @@ class GANTrainer(object):
 
     # ############# For training stageI GAN #############
     def load_network_stageI(self):
-        from model import StoryGAN, STAGE1_D_IMG, STAGE1_D_STY_V2, StoryMarttGAN
+        from .model import StoryGAN, STAGE1_D_IMG, STAGE1_D_STY_V2, StoryMarttGAN
 
         if self.use_martt:
             netG = StoryMarttGAN(self.cfg, self.video_len)

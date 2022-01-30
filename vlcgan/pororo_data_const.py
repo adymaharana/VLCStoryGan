@@ -708,7 +708,7 @@ class ImageClfDataset(torch.utils.data.Dataset):
 
 class StoryImageDataset(torch.utils.data.Dataset):
     def __init__(self, img_folder, im_input_size,
-                 out_img_folder = '/ssd-playpen/home/adyasha/projects/StoryGAN/pororo_code_mod/output/pororo_both_stageI_r1.0/Test/images-epoch-110/',
+                 out_img_folder = None,
                  mode='train',
                  video_len = 5,
                  transform=None):

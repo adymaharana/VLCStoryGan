@@ -568,7 +568,7 @@ class ImageClfDataset(torch.utils.data.Dataset):
 
 class StoryImageDataset(torch.utils.data.Dataset):
     def __init__(self, img_folder, im_input_size,
-                 out_img_folder = '/ssd-playpen/home/adyasha/projects/StoryGAN/pororo_code_mod/output/pororo_both_stageI_r1.0/Test/images-epoch-110/',
+                 out_img_folder = None,
                  mode='train',
                  video_len = 5,
                  transform=None):
@@ -651,8 +651,8 @@ class StoryImageDataset(torch.utils.data.Dataset):
         else:
             images = [self.sample_image(PIL.Image.open(os.path.join(self.img_folder, path)).convert('RGB')) for path in img_paths]
         labels = [self.labels[path.replace('.png', '').replace(self.img_folder + '/', '')] for path in img_paths]
-        # return torch.cat([self.transform(image).unsqueeze(0) for image in images], dim=0), torch.tensor(np.vstack(labels))
-        return self.transform(images), torch.tensor(np.vstack(labels))
+        return torch.cat([self.transform(image).unsqueeze(0) for image in images], dim=0), torch.tensor(np.vstack(labels))
+        #return self.transform(images), torch.tensor(np.vstack(labels))
 
     def __len__(self):
         return len(self.ids)
